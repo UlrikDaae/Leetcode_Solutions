@@ -1,5 +1,7 @@
+[Click here to see my video explanation of this task](https://www.youtube.com/watch?v=nZeAO7EFYpw)
+
 ––––––––––––––––––––––––––––––––––––––––––––––––––––
-SOLUTION
+SOLUTION 
 ––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 SELECT email 
@@ -30,3 +32,27 @@ Write an SQL query to report all the duplicate emails.
 Return the result table in any order.
 
 The query result format is in the following example.
+Example 1:
+
+Input: 
+Person table:
++----+---------+
+| id | email   |
++----+---------+
+| 1  | a@b.com |
+| 2  | c@d.com |
+| 3  | a@b.com |
++----+---------+
+Output: 
++---------+
+| Email   |
++---------+
+| a@b.com |
++---------+
+Explanation: a@b.com is repeated two times.
+Accepted
+446K
+Submissions
+630.4K
+Acceptance Rate
+70.8%
