@@ -1,6 +1,7 @@
 -- Click here to see my video-explanation of this solution: https://www.youtube.com/watch?v=nZeAO7EFYpw)
 
-/* SOLUTION 
+/* 
+SOLUTION 
 –––––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Explanation: To solve this task we have to write a query to report on all duplicate emails. A duplicate can be explained as any record with more than 1 entry, in other words "> 1". Because the rows of the ID-collumn change with every entry, we select the email-collumn where the rows are constant depending on the person. If there are > 1 email entries, then that is a duplicate.*/ 
 
