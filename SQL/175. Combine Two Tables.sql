@@ -1,6 +1,14 @@
+-- OPTION 1
 SELECT P.firstName, P.lastName, A.city, A.state
 FROM Person P
 LEFT JOIN Address A USING (personId)
+
+-- OR
+
+-- OPTION 2
+SELECT P.firstName, P.lastName, A.city, A.state
+FROM Person P
+LEFT JOIN Address A ON P.personId = A.personId
 
 
 /* 
