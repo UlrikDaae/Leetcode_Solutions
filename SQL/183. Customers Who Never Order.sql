@@ -1,10 +1,16 @@
-SELECT C.Name AS Customers 
-FROM Customers C 
-LEFT JOIN Orders O ON C.Id = O.CustomerId
-WHERE O.CustomerId IS NULL
+/* 
+EXPLANATION OF SOLUTION:
+–––––––––––––––––––––––––––––––––––––––––––––––––––– 
+*/
+/*
+To solve this task We're going to be JOINING the Customers and Orders tables together. Our task is to also report on the customers who never order, in other words where there is a NULL value. We specify this with a WHERE clause where the result is NULL. Note that in this task we also have to rename a collumn, because that is specified in how we're supposed to report our results. 
+*/
 
-
-
+-- As always with the JOIN we alias the collumns, and I like doing this with the first letter of the name of the table with capitalization. 
+SELECT C.Name AS Customers -- We first SELECT the C.name collumn and rename it as 'Customers'. 
+FROM Customers C -- We gather this from the Customers table, with the 'C' alias. 
+LEFT JOIN Orders O ON C.Id = O.CustomerId -- We join the C.Id (Id-collumn from the Customers table) on the O.CustomerId (Id-collumn for the Order-table. 
+WHERE O.CustomerId IS NULL -- We now look to filter for only the instances where the O.CustomerId has a NULL value, in other words where they haven't ordered anything. 
 
 /* 
 TASK
