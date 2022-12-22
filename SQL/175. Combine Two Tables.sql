@@ -1,14 +1,20 @@
+/* 
+Explanation of my solutions:
+To solve this task we have join the Address-table and the Person-table to report on a combination of collumns. From the Person-table we want the 'firstName' and 'lastName' collumns, while we want the 'city' and 'state' collumns from the Address-table. To solve this task we're then going to LEFT JOIN the tables together. Here's two ways of doing this:
+*/ 
+
 -- OPTION 1
-SELECT P.firstName, P.lastName, A.city, A.state
-FROM Person P
-LEFT JOIN Address A USING (personId)
+SELECT P.firstName, P.lastName, A.city, A.state -- We first use the SELECT to name every collumn we want. The caveat here, as you may know, is to name the collumns with an alias. We collumns within the Person-table the alias 'P' and the same with the Address-table with a 'A'. I like using the initial letter, but note that you could use 'Person' as the alias, e.g., giving you 'Person.firstName' instead of 'P.firstName'. We select our collumns from both tables. 
+FROM Person P -- This is our initial table. 
+LEFT JOIN Address A USING (personId) -- We LEFT JOIN P and A together on the 'personId' key. We then check all personId records in the P-table to match the personIds in the A-table. We've now joined them together, and the task is solved. 
+-- NOTE ON 'USING': I quite like solving these JOINS with a USING clause instead of 'ON' clause. This is more personal preference for me, and it's unlike what I was taught in my SQL-courses. The solution below may be more familiar to you: 
 
 -- OR
 
 -- OPTION 2
-SELECT P.firstName, P.lastName, A.city, A.state
-FROM Person P
-LEFT JOIN Address A ON P.personId = A.personId
+SELECT P.firstName, P.lastName, A.city, A.state -- Same SELECT as above.
+FROM Person P -- Same FROM as above. 
+LEFT JOIN Address A ON P.personId = A.personId -- Here we LEFT JOIN with the 'ON' clause. We JOIN  the 'P.personId' (personId from the Person-table) on 'A.personId' (personId from the Adress-table). 
 
 
 /* 
