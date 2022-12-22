@@ -6,7 +6,8 @@ WHERE O.CustomerId is NULL
 
 
 
-/* TASK
+/* 
+TASK
 ––––––––––––––––––––––––––––––––––––––––––––––––––––
 SQL Schema
 Table: Customers
