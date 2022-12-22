@@ -1,8 +1,7 @@
-[Click here to see my video explanation of this task](https://www.youtube.com/watch?v=nZeAO7EFYpw)
+-- Click here to see my video-explanation of this solution: https://www.youtube.com/watch?v=nZeAO7EFYpw)
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––
-SOLUTION 
-––––––––––––––––––––––––––––––––––––––––––––––––––––
+/* SOLUTION 
+–––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 SELECT email 
 
@@ -12,8 +11,7 @@ Group by email
 
 Having count(email) > 1
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––
-TASK
+/* TASK
 ––––––––––––––––––––––––––––––––––––––––––––––––––––
 Table: Person
 
@@ -55,4 +53,4 @@ Accepted
 Submissions
 630.4K
 Acceptance Rate
-70.8%
+70.8% */
